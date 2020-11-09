@@ -83,7 +83,7 @@ const start = (aruga = new Client()) => {
 	    })
 	    } else {
         await aruga.simulateTyping(chat.id, true).then(async () => {
-          await aruga.sendText(chat.id, `Hai minna~, Im Aruga BOT. To find out the commands on this bot type ${prefix}menu`)
+          await aruga.sendText(chat.id, `Hai minna~, Im BOT_STYLE. To find out the commands on this bot type ${prefix}menu`)
         })
 	    }
 	}
@@ -195,7 +195,7 @@ const start = (aruga = new Client()) => {
                 await aruga.joinGroupViaLink(linkgrup)
                       .then(async () => {
                           await aruga.sendText(from, 'Berhasil join grup via link!')
-                          await aruga.sendText(chekgrup.id, `Hai minna~, Im Aruga BOT. To find out the commands on this bot type ${prefix}menu`)
+                          await aruga.sendText(chekgrup.id, `Hai minna~, Im BOT_STYLE. To find out the commands on this bot type ${prefix}menu`)
                       })
             } else {
                 let cgrup = await aruga.getAllGroups()
@@ -348,7 +348,7 @@ const start = (aruga = new Client()) => {
                         hehex += '╠➥ '
                         hehex += response.data.data[i].name.transliteration.id.toLowerCase() + '\n'
                             }
-                        hehex += '╚═〘 *A R U G A  B O T* 〙'
+                        hehex += '╚═〘 *BOT_STYLE* 〙'
                     aruga.reply(from, hehex, id)
                 })
             } catch(err) {
@@ -800,7 +800,7 @@ const start = (aruga = new Client()) => {
                 hehex += '╠➥'
                 hehex += ` @${groupMem[i].id.replace(/@c.us/g, '')}\n`
             }
-            hehex += '╚═〘 *A R U G A  B O T* 〙'
+            hehex += '╚═〘 *BOT_STYLE* 〙'
             await aruga.sendTextWithMentions(from, hehex)
             break
         case 'botstat': {
@@ -857,8 +857,8 @@ const start = (aruga = new Client()) => {
             const chatz = await aruga.getAllChatIds()
             for (let idk of chatz) {
                 var cvk = await aruga.getChatById(idk)
-                if (!cvk.isReadOnly) aruga.sendText(idk, `〘 *A R U G A  B C* 〙\n\n${msg}`)
-                if (cvk.isReadOnly) aruga.sendText(idk, `〘 *A R U G A  B C* 〙\n\n${msg}`)
+                if (!cvk.isReadOnly) aruga.sendText(idk, `〘 *B E N N I  B C* 〙\n\n${msg}`)
+                if (cvk.isReadOnly) aruga.sendText(idk, `〘 *B E N N I  B C* 〙\n\n${msg}`)
             }
             aruga.reply(from, 'Broadcast Success!', id)
             break
